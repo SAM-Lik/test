@@ -1,0 +1,12 @@
+services:
+ demo_service:
+   build: .
+   container_name: demo_1
+   volumes:
+     - data_volume:/data_example
+   command: ["--name", "ComposeUser", "--file", "/data_example/greeting.txt"]
+
+volumes:
+ data_volume:
+
+
